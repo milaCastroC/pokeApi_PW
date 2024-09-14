@@ -1,0 +1,422 @@
+
+/* Aplicar estilos básicos a todos los elementos */
+* {
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar relleno predeterminado */
+    box-sizing: border-box; /* Incluir el padding y el border en el ancho y alto total del elemento */
+    color: #1c1c1c; /* Establecer color de texto por defecto */
+    font-family: 'Rubik', sans-serif; /* Aplicar la fuente Rubik a todo el texto */
+}
+
+/* Estilos para la clase .img */
+.img {
+    width: 10%; /* Ajustar el ancho de las imágenes al 10% del contenedor */
+}
+
+/* Estilos para las listas desordenadas */
+ul {
+    list-style-type: none; /* Eliminar los puntos de las listas */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: transparent; /* Fondo transparente para los botones */
+    border: 0; /* Sin borde */
+    border-radius: 0; /* Sin borde redondeado */
+}
+
+/* Estilos para el body */
+body {
+    min-height: 100vh; /* Asegurar que el body ocupe al menos el 100% de la altura de la ventana */
+    background-color: #ececec; /* Color de fondo del body */
+}
+
+/* Estilos para el header */
+header {
+    padding-block: 1rem; /* Espaciado vertical en el header */
+    box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5); /* Sombra del header */
+}
+
+/* Estilos para la barra de navegación */
+.nav {
+    display: flex; /* Utilizar Flexbox para el layout */
+    flex-direction: column; /* Organizar los elementos en una columna */
+    gap: 1rem; /* Espacio entre los elementos */
+    padding-inline: 2rem; /* Espaciado horizontal interno */
+    align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+/* Estilos para la lista de navegación */
+.nav-list {
+    display: flex; /* Utilizar Flexbox para el layout */
+    align-items: center; /* Alinear los elementos verticalmente al centro */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+    gap: .5rem; /* Espacio entre los elementos */
+}
+
+/* Estilos para los botones del header */
+.btn-header {
+    background-color: #ececec; /* Color de fondo del botón */
+    padding: .5rem; /* Espaciado interno del botón */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar sobre el botón */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    font-weight: 600; /* Negrita en el texto */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25); /* Sombra del botón */
+    transition: .2s; /* Suavizar la transición para los efectos de hover */
+}
+
+/* Estilos para el botón del header en estado hover */
+.btn-header:hover {
+    transform: scale(1.1); /* Ampliar el botón al pasar el ratón sobre él */
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .25); /* Aumentar la sombra del botón */
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    display: flex; /* Utilizar Flexbox para el layout */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    margin-top: 20px; /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el campo de entrada de búsqueda */
+#search-input {
+    width: 300px; /* Ancho fijo del campo de entrada */
+    padding: 10px; /* Espaciado interno del campo de entrada */
+    font-size: 16px; /* Tamaño de fuente del texto dentro del campo */
+    border: 2px solid #0000FF; /* Borde azul del campo de entrada */
+    background-color: #F8D030; /* Color de fondo del campo de entrada */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Eliminar el contorno por defecto del campo de entrada */
+    transition: all 0.3s ease-in-out; /* Suavizar las transiciones de todos los cambios */
+}
+
+/* Estilos para el placeholder dentro del campo de entrada */
+#search-input::placeholder {
+    color: #ffffff; /* Color del texto del placeholder */
+}
+
+/* Estilos para el campo de entrada al recibir foco */
+#search-input:focus {
+    border-color: #0000FF; /* Cambiar el color del borde al azul al recibir foco */
+    box-shadow: 0 0 10px rgb(4, 4, 120, 0.5); /* Agregar una sombra alrededor del campo al recibir foco */
+}
+
+/* Estilos para el botón de búsqueda */
+#search-button {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin-left: 10px; /* Espaciado izquierdo del botón */
+    background-color: #F8D030; /* Color de fondo del botón */
+    border: 2px solid #0000FF; /* Borde azul del botón */
+    font-size: 16px; /* Tamaño de fuente del texto dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Suavizar la transición del color de fondo */
+    color: #ffffff; /* Color del texto del botón */
+    font-weight: bold; /* Negrita en el texto del botón */
+}
+
+/* Estilos para el botón de búsqueda en estado hover */
+#search-button:hover {
+    border-color: #0000FF; /* Cambiar el color del borde al azul al pasar el ratón sobre el botón */
+    box-shadow: 0 0 10px rgb(4, 4, 120, 0.5); /* Agregar una sombra alrededor del botón al pasar el ratón */
+}
+
+/* Estilos para los diferentes tipos de Pokémon */
+.normal {
+    background-color: #A8A878; /* Color de fondo para el tipo Normal */
+    color: #1c1c1c; /* Color del texto para el tipo Normal */
+}
+
+.fire {
+    background-color: #F08030; /* Color de fondo para el tipo Fuego */
+    color: #1c1c1c; /* Color del texto para el tipo Fuego */
+}
+
+.water {
+    background-color: #6890F0; /* Color de fondo para el tipo Agua */
+    color: #1c1c1c; /* Color del texto para el tipo Agua */
+}
+
+.grass {
+    background-color: #78C850; /* Color de fondo para el tipo Planta */
+    color: #1c1c1c; /* Color del texto para el tipo Planta */
+}
+
+.electric {
+    background-color: #F8D030; /* Color de fondo para el tipo Eléctrico */
+    color: #1c1c1c; /* Color del texto para el tipo Eléctrico */
+}
+
+.ice {
+    background-color: #98D8D8; /* Color de fondo para el tipo Hielo */
+    color: #1c1c1c; /* Color del texto para el tipo Hielo */
+}
+
+.fighting {
+    background-color: #C03028; /* Color de fondo para el tipo Lucha */
+    color: #1c1c1c; /* Color del texto para el tipo Lucha */
+}
+
+.poison {
+    background-color: #A040A0; /* Color de fondo para el tipo Veneno */
+    color: #1c1c1c; /* Color del texto para el tipo Veneno */
+}
+
+.ground {
+    background-color: #E0C068; /* Color de fondo para el tipo Tierra */
+    color: #1c1c1c; /* Color del texto para el tipo Tierra */
+}
+
+.flying {
+    background-color: #A890F0; /* Color de fondo para el tipo Volador */
+    color: #1c1c1c; /* Color del texto para el tipo Volador */
+}
+
+.psychic {
+    background-color: #F85888; /* Color de fondo para el tipo Psíquico */
+    color: #1c1c1c; /* Color del texto para el tipo Psíquico */
+}
+
+.bug {
+    background-color: #A8B820; /* Color de fondo para el tipo Bicho */
+    color: #1c1c1c; /* Color del texto para el tipo Bicho */
+}
+
+.rock {
+    background-color: #B8A038; /* Color de fondo para el tipo Roca */
+    color: #1c1c1c; /* Color del texto para el tipo Roca */
+}
+
+.ghost {
+    background-color: #705898; /* Color de fondo para el tipo Fantasma */
+    color: #1c1c1c; /* Color del texto para el tipo Fantasma */
+}
+
+.dark {
+    background-color: #705848; /* Color de fondo para el tipo Siniestro */
+    color: #1c1c1c; /* Color del texto para el tipo Siniestro */
+}
+
+.dragon {
+    background-color: #7038F8; /* Color de fondo para el tipo Dragón */
+    color: #1c1c1c; /* Color del texto para el tipo Dragón */
+}
+
+.steel {
+    background-color: #B8B8D0; /* Color de fondo para el tipo Acero */
+    color: #1c1c1c; /* Color del texto para el tipo Acero */
+}
+
+.fairy {
+    background-color: #F0B6BC; /* Color de fondo para el tipo Hada */
+    color: #1c1c1c; /* Color del texto para el tipo Hada */
+}
+
+/* Estilos para el elemento main */
+main {
+    padding: 2rem; /* Espaciado interno de 2rem en el elemento main */
+}
+
+/* Estilos para la lista de Pokémon */
+.lista-pokemones {
+    display: grid; /* Utilizar grid layout */
+    grid-template-columns: 1fr 1fr; /* Crear dos columnas de igual ancho */
+    gap: 1rem; /* Espacio entre los elementos de la grid */
+}
+
+/* Estilos para los contenedores de Pokémon */
+.pokemon {
+    border-radius: 1rem; /* Bordes redondeados del contenedor */
+    background-color: #f7f7f7; /* Color de fondo del contenedor */
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, .25); /* Sombra del contenedor */
+    padding-block: 1rem; /* Espaciado vertical interno */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    position: relative; /* Posición relativa para posicionamiento absoluto de elementos internos */
+    isolation: isolate; /* Aislar el contenedor para evitar que los elementos hijos afecten a los elementos externos */
+    overflow: hidden; /* Ocultar el desbordamiento del contenido */
+}
+
+/* Estilos para el identificador del Pokémon en la parte posterior */
+.pokemon-id-back {
+    position: absolute; /* Posición absoluta para situar el ID en un lugar específico */
+    top: 1rem; /* Espaciado superior */
+    left: 50%; /* Centrarse horizontalmente */
+    transform: translateX(-50%); /* Ajustar para centrar el elemento */
+    font-size: 6rem; /* Tamaño de fuente grande para el ID */
+    font-weight: 800; /* Peso de fuente en negrita */
+    color: #ececec; /* Color del texto del ID */
+    z-index: -1; /* Colocar el ID detrás de otros elementos */
+}
+
+/* Estilos para la imagen del Pokémon */
+.pokemon-imagen {
+    padding-inline: 1rem; /* Espaciado horizontal interno */
+    display: flex; /* Utilizar Flexbox para el layout */
+    justify-content: center; /* Centrar la imagen horizontalmente */
+}
+
+/* Estilos para las imágenes dentro del contenedor de imagen del Pokémon */
+.pokemon-imagen img {
+    width: 100%; /* Hacer que la imagen ocupe el 100% del contenedor */
+    max-width: 6rem; /* Establecer un ancho máximo para la imagen */
+}
+
+/* Estilos para la información del Pokémon */
+.pokemon-info {
+    display: flex; /* Utilizar Flexbox para el layout */
+    flex-direction: column; /* Organizar los elementos en una columna */
+    gap: .5rem; /* Espacio entre los elementos */
+    padding-inline: 1rem; /* Espaciado horizontal interno */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+/* Estilos para el contenedor del nombre del Pokémon */
+.nombre-contenedor {
+    display: flex; /* Utilizar Flexbox para el layout */
+    align-items: center; /* Alinear los elementos verticalmente al centro */
+    gap: .5rem; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+}
+
+/* Estilos para el ID del Pokémon */
+.pokemon-id {
+    background-color: #ececec; /* Color de fondo del ID */
+    padding: .25rem .5rem; /* Espaciado interno del ID */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+    font-size: .75rem; /* Tamaño de fuente pequeño para el ID */
+    font-weight: 500; /* Peso de fuente en negrita ligera */
+}
+
+/* Estilos para el nombre del Pokémon */
+.pokemon-nombre {
+    font-size: 1.4rem; /* Tamaño de fuente para el nombre del Pokémon */
+}
+
+/* Estilos para los tipos del Pokémon */
+.pokemon-tipos {
+    display: flex; /* Utilizar Flexbox para el layout */
+    gap: .5rem; /* Espacio entre los tipos */
+    font-size: .75rem; /* Tamaño de fuente pequeño para los tipos */
+    font-weight: 500; /* Peso de fuente en negrita ligera */
+    flex-wrap: wrap; /* Permitir que los tipos se envuelvan en varias líneas */
+    justify-content: center; /* Centrar los tipos horizontalmente */
+}
+
+/* Estilos para cada tipo del Pokémon */
+.tipo {
+    padding: .25rem .5rem; /* Espaciado interno del tipo */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+}
+
+/* Estilos para las estadísticas del Pokémon */
+.pokemon-stats {
+    display: flex; /* Utilizar Flexbox para el layout */
+    gap: 2rem; /* Espacio entre las estadísticas */
+    font-size: .85rem; /* Tamaño de fuente para las estadísticas */
+    justify-content: center; /* Centrar las estadísticas horizontalmente */
+}
+
+/* Estilos para cada estadística del Pokémon */
+.stat {
+    background-color: #ececec; /* Color de fondo de la estadística */
+    padding: .25rem .5rem; /* Espaciado interno de la estadística */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+}
+/* Media query para pantallas de al menos 470px de ancho */
+@media screen and (min-width: 470px) {
+    .lista-pokemones {
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho para pantallas medianas */
+    }
+}
+
+/* Media query para pantallas de al menos 700px de ancho */
+@media screen and (min-width: 700px) {
+    .lista-pokemones {
+        grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual ancho para pantallas grandes */
+    }
+}
+
+/* Estilos para el lightbox */
+.lightbox {
+    display: none; /* Ocultar el lightbox por defecto */
+    position: fixed; /* Posicionar el lightbox de forma fija en la pantalla */
+    z-index: 100; /* Colocar el lightbox sobre otros elementos */
+    left: 0; /* Alinear el lightbox al borde izquierdo */
+    top: 0; /* Alinear el lightbox al borde superior */
+    width: 100%; /* Hacer que el lightbox ocupe todo el ancho de la pantalla */
+    height: 100%; /* Hacer que el lightbox ocupe toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente negro para el lightbox */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+}
+
+/* Estilos para el contenido del lightbox */
+.lightbox-content {
+    background-color: #ffffff; /* Fondo blanco para el contenido del lightbox */
+    padding: 20px; /* Espaciado interno de 20px */
+    border-radius: 10px; /* Bordes redondeados de 10px */
+    position: relative; /* Posición relativa para el posicionamiento absoluto de elementos hijos */
+    text-align: center; /* Centrar el texto dentro del lightbox */
+    max-width: 500px; /* Ancho máximo del contenido del lightbox */
+    width: 90%; /* Ancho del contenido del lightbox como porcentaje del contenedor */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+}
+
+/* Estilos para el botón de cierre del lightbox */
+.lightbox-close {
+    position: absolute; /* Posicionar el botón de cierre de forma absoluta dentro del lightbox */
+    top: 10px; /* Espaciado superior de 10px */
+    right: 20px; /* Espaciado desde el borde derecho de 20px */
+    font-size: 30px; /* Tamaño de fuente grande para el botón de cierre */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar sobre el botón de cierre */
+}
+
+/* Estilos para las imágenes dentro del lightbox */
+.lightbox img {
+    max-width: 100%; /* Asegurar que la imagen no exceda el ancho del lightbox */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Estilos para el ID del Pokémon en el lightbox */
+#lightbox-id {
+    background-color: #ececec; /* Fondo gris claro para el ID del Pokémon */
+    padding: .25rem .5rem; /* Espaciado interno del ID */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente del ID */
+    font-weight: 600; /* Peso de fuente en negrita */
+    margin-top: 10px; /* Espaciado superior del ID */
+}
+
+/* Estilos para los tipos de Pokémon en el lightbox */
+#lightbox-types {
+    display: flex; /* Utilizar Flexbox para el layout */
+    justify-content: space-around; /* Distribuir los tipos de manera uniforme en el espacio disponible */
+    margin-top: 10px; /* Espaciado superior de los tipos */
+}
+
+/* Estilos para cada tipo de Pokémon en el lightbox */
+#lightbox-types p {
+    padding: .25rem .5rem; /* Espaciado interno para cada tipo */
+    border-radius: 100vmax; /* Bordes completamente redondeados */
+    font-size: .85rem; /* Tamaño de fuente para los tipos */
+    font-weight: 500; /* Peso de fuente en negrita ligera */
+}
+
+/* Estilos para las estadísticas del Pokémon en el lightbox */
+#lightbox-stats {
+    display: flex; /* Utilizar Flexbox para el layout */
+    justify-content: space-around; /* Distribuir las estadísticas de manera uniforme en el espacio disponible */
+    margin-top: 10px; /* Espaciado superior de las estadísticas */
+}
+
+/* Estilos para cada estadística del Pokémon en el lightbox */
+#lightbox-stats p {
+    background-color: #ececec; /* Fondo gris claro para las estadísticas */
+    padding: 5px 10px; /* Espaciado interno de las estadísticas */
+    border-radius: 20px; /* Bordes redondeados para las estadísticas */
+}

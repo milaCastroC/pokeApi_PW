@@ -5,29 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria Pokemon</title>
-    <link rel="stylesheet" href="stylePokeAPI.css">
+    <link rel="stylesheet" href="stylePokeAPI.css"> <!-- Enlace a la hoja de estilos CSS -->
+
+    <!-- Carga de fuentes de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Galería de pokemones</h1>
-
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Buscar">
-        <button id="search-button">Buscar</button>
-    </div>
-
-    <div class="gallery" id="gallery">
-        <div id="pokemonModal" class="modal">
-            <div class="modal-content">
-                <span class="close">Cerrar</span>
-                <div id="pokemon-details">
-
-                </div>
+    <!-- Sección del encabezado -->
+    <header>
+        <!-- Barra de navegación con botones de filtro por tipo de Pokémon -->
+        <nav class="nav">
+            <img class="img" id="img" src="Imagenes/pokemon.svg" alt="Logo Pokemon">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn-header" id="ver-todos">Ver todos</button></li>
+                <li class="nav-item"><button class="btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn-header fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn-header water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn-header grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn-header electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn-header ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn-header fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn-header poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn-header ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn-header flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn-header psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn-header bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn-header rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn-header ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="btn-header dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn-header steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn-header fairy" id="fairy">Fairy</button></li>
+            </ul>
+        </nav>
+        <!-- Contenedor de búsqueda, para buscar Pokémon por nombre -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Introduce el nombre del pokemón">
+            <button id="search-button">Buscar</button>
+        </div>
+    </header>
+    <!-- Contenedor principal para la galería de Pokémon -->
+    <main>
+        <div class="pokemones" id="pokemones">
+            <!-- Contenedor dinámico donde se insertarán las tarjetas de Pokémon -->
+            <div class="lista-pokemones" id="lista-Pokemones">
             </div>
+        </div>
+    </main>
+    <!-- Lightbox para mostrar los detalles de los Pokémon seleccionados -->
+    <div id="pokemon-lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span id="lightbox-close" class="lightbox-close">X</span>
+            <img id="lightbox-img" src="" alt="Pokemon Image">
+            <p id="lightbox-id">#ID</p>
+            <h2 id="lightbox-name">Nombre del Pokémon</h2>
+            <div id="lightbox-types"></div>
+            <div id="lightbox-stats"></div>
         </div>
     </div>
 
-    <script src="ScriptPokeAPI.js"></script>
+    <script src="ScriptPokeAPI.js"></script> <!-- Enlaca al Archivo JavaScript -->
 
 </body>
 
