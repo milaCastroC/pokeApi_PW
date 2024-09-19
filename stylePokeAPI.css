@@ -339,6 +339,7 @@ main {
     .lista-pokemones {
         grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual ancho para pantallas grandes */
     }
+
 }
 
 /* Estilos para el lightbox */

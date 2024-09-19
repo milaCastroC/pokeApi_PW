@@ -140,3 +140,4 @@ lightboxClose.addEventListener("click", () => {
 
 // Cargar todos los Pokémon al cargar la página
 fetchPokemons(); // Llama a la función para obtener y mostrar los Pokémon
+
